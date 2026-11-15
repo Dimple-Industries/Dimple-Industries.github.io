@@ -8,7 +8,8 @@
   <meta name="description" content="Dimple Industries in Katpadi, Vellore manufactures electrical panels and supplies cables, cable trays, M.S. boxes, PVC conduits and accessories.">
   <link rel="canonical" href="https://dimple-industries.github.io/">
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='64' height='64' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='13' fill='%23edaa72'/%3E%3Ctext x='32' y='42' text-anchor='middle' font-family='sans-serif' font-size='28' font-weight='bold' fill='%23101b24'%3EDI%3C/text%3E%3C/svg%3E">
-  <link rel="stylesheet" href="di-site.css?v=2">
+  <link rel="stylesheet" href="di-site.css?v=3">
+  <script src="di-quote.js" defer></script>
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -40,6 +41,7 @@
       <nav aria-label="Main navigation">
         <a href="#products">Products</a>
         <a href="#brands">Brands</a>
+        <a href="#quote">Quote</a>
         <a href="#contact">Contact</a>
       </nav>
       <a class="top-call" href="tel:+919443255264">+91 94432 55264 <span aria-hidden="true">↗</span></a>
@@ -53,7 +55,7 @@
           <h1 id="hero-title">Electrical panels<br> &amp; <em>supplies.</em></h1>
           <p class="intro">Dimple Industries manufactures electrical panels and supplies cables, cable trays, M.S. boxes, PVC conduits and accessories.</p>
           <div class="actions">
-            <a class="button primary" href="tel:+919443255264">Call for a quote <span aria-hidden="true">↗</span></a>
+            <a class="button primary" href="#quote">Request a quote <span aria-hidden="true">↗</span></a>
             <a class="button outline" href="#products">Explore products <span aria-hidden="true">↓</span></a>
           </div>
         </div>
@@ -68,30 +70,42 @@
       <div class="wrap">
         <div class="section-heading">
           <h2 id="products-title">Electrical equipment</h2>
-          <p>Call to discuss your specifications, quantities and availability.</p>
+          <p>Choose an item to start a quote request.</p>
         </div>
         <div class="cards">
           <article class="card">
             <img src="di-media/panel-boards.webp" alt="A row of electrical panel boards" width="550" height="370" loading="lazy">
-            <div><h3>Panel boards</h3><p>Electrical panels for power distribution and control.</p></div>
+            <div>
+              <h3>Panel boards</h3>
+              <p>Electrical panels for power distribution and control.</p>
+              <a class="product-quote" href="#quote" data-product="Panel boards">Ask about panel boards <span aria-hidden="true">↗</span></a>
+            </div>
           </article>
           <article class="card">
             <img src="di-media/bus-ducts.webp" alt="Overhead bus ducts above electrical equipment" width="550" height="370" loading="lazy">
-            <div><h3>Bus ducts</h3><p>Enclosed busbar assemblies for power distribution.</p></div>
+            <div>
+              <h3>Bus ducts</h3>
+              <p>Enclosed busbar assemblies for power distribution.</p>
+              <a class="product-quote" href="#quote" data-product="Bus ducts">Ask about bus ducts <span aria-hidden="true">↗</span></a>
+            </div>
           </article>
           <article class="card">
             <img src="di-media/transformer.webp" alt="An installed outdoor electrical transformer" width="550" height="370" loading="lazy">
-            <div><h3>Transformers</h3><p>Enquire about transformers for your installation.</p></div>
+            <div>
+              <h3>Transformers</h3>
+              <p>Enquire about transformers for your installation.</p>
+              <a class="product-quote" href="#quote" data-product="Transformers">Ask about transformers <span aria-hidden="true">↗</span></a>
+            </div>
           </article>
         </div>
         <div class="materials">
           <h3>Installation supplies</h3>
           <ul>
-            <li>Cables</li>
-            <li>Cable trays</li>
-            <li>M.S. boxes</li>
-            <li>PVC conduits</li>
-            <li>Electrical accessories</li>
+            <li><a href="#quote" data-product="Cables">Cables</a></li>
+            <li><a href="#quote" data-product="Cable trays">Cable trays</a></li>
+            <li><a href="#quote" data-product="M.S. boxes">M.S. boxes</a></li>
+            <li><a href="#quote" data-product="PVC conduits">PVC conduits</a></li>
+            <li><a href="#quote" data-product="Electrical accessories">Electrical accessories</a></li>
           </ul>
         </div>
       </div>
@@ -106,6 +120,74 @@
         <ul class="brand-list">
           <li>Polycab</li><li>Finolex</li><li>RR Kabel</li><li>Honeywell</li><li>Legrand</li><li>GreatWhite</li>
         </ul>
+      </div>
+    </section>
+
+    <section id="quote" class="quote" aria-labelledby="quote-title">
+      <div class="wrap quote-grid">
+        <div class="quote-copy">
+          <h2 id="quote-title">Request a quote</h2>
+          <p>Tell us what you need, how much you need, and any specifications. Call us directly if you’d like to discuss the requirement first.</p>
+          <a class="button quote-secondary" href="tel:+919443255264">Call +91 94432 55264</a>
+        </div>
+        <form id="quote-form" class="quote-form" hidden>
+          <div class="quote-fields">
+            <label for="quote-product">
+              Product <span>(required)</span>
+              <select id="quote-product" name="product" required>
+                <option value="">Select a product</option>
+                <option>Panel boards</option>
+                <option>Bus ducts</option>
+                <option>Transformers</option>
+                <option>Cables</option>
+                <option>Cable trays</option>
+                <option>M.S. boxes</option>
+                <option>PVC conduits</option>
+                <option>Electrical accessories</option>
+                <option>Other electrical requirement</option>
+              </select>
+            </label>
+            <label for="quote-quantity">
+              Quantity and unit
+              <input id="quote-quantity" name="quantity" type="text" maxlength="60" placeholder="e.g. 5 panels or 100 metres">
+            </label>
+            <label for="quote-details" class="quote-details">
+              Specifications or preferred brand
+              <textarea id="quote-details" name="details" rows="3" maxlength="500" placeholder="e.g. size, rating, brand or project requirements"></textarea>
+            </label>
+          </div>
+          <button class="button primary" type="submit">Prepare request</button>
+          <div id="quote-result" class="quote-result" hidden>
+            <label for="quote-message">Your request</label>
+            <textarea id="quote-message" rows="5" readonly aria-describedby="quote-instructions"></textarea>
+            <p id="quote-instructions">Copy your request, then open SMS to paste and send it.</p>
+            <div class="actions">
+              <button id="quote-copy" class="button primary" type="button">Copy request</button>
+              <a class="button quote-secondary" href="sms:+919443255264">Open SMS</a>
+            </div>
+            <p id="quote-status" role="status"></p>
+          </div>
+        </form>
+      </div>
+    </section>
+
+    <section id="faq" class="faq" aria-labelledby="faq-title">
+      <div class="wrap faq-grid">
+        <h2 id="faq-title">Common questions</h2>
+        <div class="faq-list">
+          <details>
+            <summary>What should I include in a quote request?</summary>
+            <p>Include the product, quantity and unit, and any size, electrical rating, or preferred brand. Mention the project requirement if it affects the specification.</p>
+          </details>
+          <details>
+            <summary>Can I check stock for a particular brand?</summary>
+            <p>Call <a href="tel:+919443255264">+91 94432 55264</a> with the brand, model, and quantity so we can confirm availability.</p>
+          </details>
+          <details>
+            <summary>Where are you located?</summary>
+            <p>We’re on Katpadi to Thiruvalam Road in KRS Nagar, Katpadi, Vellore. Visit <a href="#contact">Contact and directions</a> for the map and business hours.</p>
+          </details>
+        </div>
       </div>
     </section>
 
@@ -130,6 +212,7 @@
   <footer>
     <div class="wrap footer-inner">
       <span>© Dimple Industries</span>
+      <a href="#faq">Common questions</a>
       <span>Dimple Electricals &amp; Industries · Katpadi, Vellore</span>
     </div>
   </footer>
