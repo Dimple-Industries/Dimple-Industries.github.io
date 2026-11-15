@@ -47,7 +47,7 @@ nav a:hover, .top-call:hover, .listing a:hover { text-decoration: underline; tex
 .eyebrow { display: flex; align-items: center; gap: 11px; color: var(--copper); font-size: .75rem; text-transform: uppercase; letter-spacing: .19em; font-weight: 750; margin-bottom: 24px; }
 .eyebrow span { width: 24px; height: 2px; background: currentColor; }
 h1, h2, h3 { font-family: "Barlow", "Inter", system-ui, sans-serif; }
-h1 { font-size: clamp(3rem, 6vw, 5.65rem); line-height: .98; letter-spacing: -.065em; font-weight: 800; }
+h1 { font-size: clamp(2.15rem, 4.45vw, 4.15rem); line-height: 1.04; letter-spacing: -.065em; font-weight: 800; }
 h1 em { color: var(--copper); font-style: normal; }
 .intro { max-width: 480px; font-size: 1.055rem; line-height: 1.65; color: #dbe2e6; margin: 25px 0 29px; }
 .actions { display: flex; flex-wrap: wrap; gap: 11px; }
@@ -104,7 +104,7 @@ footer { color: #d2dce2; background: var(--ink); border-top: 1px solid #34414a; 
   nav { order: 2; width: 100%; gap: 24px; }
   .hero { padding: 38px 0 44px; }
   .hero-grid, .contact-grid { grid-template-columns: 1fr; gap: 26px; }
-  h1 { font-size: clamp(2.9rem, 9.5vw, 4.4rem); }
+  h1 { font-size: clamp(2.1rem, 8.8vw, 3.85rem); }
   .products, .brands, .contact { padding: 42px 0; }
   .section-heading { display: block; margin-bottom: 19px; }
   .section-heading p { margin-top: 9px; }
